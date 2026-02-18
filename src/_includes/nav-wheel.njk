@@ -1,0 +1,38 @@
+{% if activeSlug is not defined %}
+  {% set activeSlug = "" %}
+  {% if pillarId is defined %}
+    {% for item in pillars %}
+      {% if item.id == pillarId %}
+        {% set activeSlug = item.slug %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+<div
+  class="nav-wheel"
+  role="navigation"
+  aria-label="Pillar-led view navigation"
+>
+  {% for item in pillars %}
+    {% if page
+      .url
+      .startsWith("/strategy/") %}
+      <a
+        class="wheel-label {{ item.class }}{% if activeSlug and item.slug == activeSlug %} active{% endif %}"
+        href="/strategy/{{ item.slug }}/"
+      >
+        {{ item.label }}
+      </a>
+    {% else %}
+      <div
+        class="wheel-label {{ item.class }}"
+        data-pillar-id="{{ item.id }}"
+        data-pillar-slug="{{ item.slug }}"
+      >
+        {{ item.label }}
+      </div>
+    {% endif %}
+  {% endfor %}
+  <div class="wheel-center"></div>
+</div>

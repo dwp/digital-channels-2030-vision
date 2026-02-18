@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ title }} - Visualising 2030 Strategy</title>
+    <link rel="stylesheet" href="/assets/main.css"/>
+    <link rel="icon" sizes="32x32" href="/assets/favicon.ico">
+  </head>
+  <body class="{% if not page.url.startsWith('/strategy/') %}{{ title.toLowerCase() }}-page{% endif %}{% if pillarId %} {{ pillarId }}{% endif %}">
+    <header>
+      <p class="breadcrumb">
+        <a href="/">Home</a>
+        {% if page.url != "/" %}
+          <span aria-hidden="true"> &gt; </span>
+          {% if page
+            .url
+            .startsWith("/strategy/")and page
+            .url != "/strategy/" %}
+            <a href="/strategy/">Strategy</a>
+            <span aria-hidden="true"> &gt; </span>
+            <span aria-current="page">{{ title }}</span>
+          {% else %}
+            <span aria-current="page">{{ title }}</span>
+          {% endif %}
+        {% endif %}
+      </p>
+      {% if page
+        .url
+        .startsWith("/strategy/")and pillarId %}
+        {% set pillarOutcomes = outcomesByPillar[pillarId] %}
+        {% if pillarOutcomes and pillarOutcomes.length %}
+          <nav class="outcome-nav" aria-label="Pillar outcomes">
+            <ul>
+              {% for outcome in pillarOutcomes %}
+                <li>
+                  <button
+                    type="button"
+                    class="{% if loop.first %}is-active{% endif %}"
+                    aria-selected="{% if loop.first %}true{% else %}false{% endif %}"
+                    aria-controls="outcome-desc-{{ outcome.id }}"
+                    data-outcome-id="{{ outcome.id }}"
+                    data-activity-ids="{{ outcome.actionIds | join(',') }}"
+                  >
+                    {{ outcome.label }}
+                  </button>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+          <div class="outcome-descriptions">
+            {% for outcome in pillarOutcomes %}
+              <p
+                id="outcome-desc-{{ outcome.id }}"
+                data-outcome-id="{{ outcome.id }}"
+                {% if not loop.first %}hidden{% endif %}
+              >
+                {{ outcome.description }}
+              </p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+      {% include "view-selector.njk" %}
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <p>DWP - Digital Channels - Visualising 2030 Strategy</p>
+    </footer>
+    {% include "support-banner.njk" %}
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.min.js"></script>
+    <script src="/assets/main.js"></script>
+  </body>
+</html>

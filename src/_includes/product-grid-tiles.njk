@@ -1,0 +1,26 @@
+<ul class="products-grid">
+  {% for tile in productsWithTags %}
+    {% set actionIds = actionsByProduct[tile.id] or[] %}
+    <li data-product-id="{{ tile.id }}" data-action-ids="{{ actionIds | join(',') }}">
+      <div class="tile-bg"></div>
+      <div class="tile-content">
+        <img class="tile-icon" src="/icons/{{ tile.icon }}" alt="Icon of {{ tile.label }}"/>
+        <span class="tile-label">{{ tile.label }}</span>
+      </div>
+      <div class="product-tooltip-template" hidden>
+        <article class="product-tooltip-card">
+          <button class="product-tooltip-close" type="button" data-tooltip-close aria-label="Close tooltip">
+          &#x2715;
+          </button>
+          <h2 class="product-tooltip-title">{{ tile.name }}</h2>
+          <p class="product-tooltip-description">{{ tile.description }}</p>
+          <div class="product-tags" hidden>
+            {% for tag in tile.tags or[] %}
+              <span class="product-tag" data-action-ids="{{ tag.actionIds | join(',') }}" hidden>{{ tag.label }}</span>
+            {% endfor %}
+          </div>
+        </article>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $colour-body-bg;
+  background-image:
+    -webkit-linear-gradient(
+      60deg,
+      transparent 49%,
+      $colour-body-pattern 50%,
+      transparent 51%
+    ),
+    -webkit-linear-gradient(
+        120deg,
+        transparent 49%,
+        $colour-body-pattern 50%,
+        transparent 51%
+      ),
+    url("/assets/faded-background-icon.png");
+  background-size:
+    200px 116px,
+    200px 116px,
+    400px;
+  background-position:
+    calc(100% + 58px) 16px,
+    calc(100% + 58px) 16px,
+    calc(100% + 58px) 5px;
+  background-repeat: repeat, repeat, repeat;
+  background-blend-mode: normal, normal, soft-light;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,12 @@
+@media (min-width: 1280px) {
+  body {
+    background-position:
+      50% 16px,
+      50% 16px,
+      calc(50% + 100px) 5px;
+  }
+
+  .dwp-support-banner {
+    display: none;
+  }
+}

@@ -1,0 +1,618 @@
+@use "sass:map";
+@use "variables" as *;
+
+.products-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(4, 116px);
+  grid-auto-columns: 100px;
+  width: max-content;
+  margin-left: auto;
+  gap: 0;
+  position: relative;
+  top: 79px;
+  right: -58px;
+  justify-content: end;
+  justify-items: end;
+
+  li {
+    height: 112px;
+    width: 196px;
+    color: $colour-text-muted;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    cursor: pointer;
+
+    // Every even column item is shifted down to create a honeycomb pattern
+    &:nth-child(8n + 5),
+    &:nth-child(8n + 6),
+    &:nth-child(8n + 7),
+    &:nth-child(8n + 8) {
+      transform: translateY(58px);
+    }
+  }
+
+  li:not(.active) {
+    pointer-events: none;
+
+    .tile-icon {
+      opacity: 0.4;
+    }
+    .tile-label {
+      opacity: 0.5;
+    }
+  }
+
+  .product-page & li:not(.active) {
+    pointer-events: auto;
+  }
+}
+
+.tile-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $colour-tile-bg;
+}
+
+.tile-bg:hover,
+.products-grid li.active .tile-bg {
+  background: $colour-white;
+  z-index: 1;
+}
+
+.tile-bg:hover ~ .tile-content .tile-icon {
+  filter: brightness(0.85);
+  transform: scale(1.05);
+}
+
+.tile-icon {
+  width: 70px;
+  height: 70px;
+  display: block;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.tile-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.tile-label {
+  display: block;
+  position: relative;
+  transform: translate(35px, -20px) skewY(-30deg) scaleY(1.3);
+  transform-origin: center;
+  width: 16ch;
+  font-size: 0.6rem;
+  line-height: 1;
+}
+
+.service-container {
+  order: 1;
+  transform: translateY(90px);
+}
+
+.services-list,
+.activity-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  font-size: 0.9rem;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .service-label {
+    background-color: $colour-white;
+    border: 2px solid $colour-black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 7px 10px;
+    cursor: pointer;
+
+    &.is-active {
+      background-color: $colour-primary;
+      color: $colour-primary-contrast;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .outcome-page & {
+    font-size: 0.8rem;
+
+    .service-label.is-active--mapped {
+      background-color: $colour-secondary;
+    }
+  }
+
+  .product-page & {
+    li {
+      opacity: 0.5;
+      pointer-events: none;
+
+      &:has(.is-active) {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.outcome-page {
+  .service-container {
+    transform: none;
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+.service-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid $colour-text-dark;
+  background: $colour-surface;
+  color: $colour-text-dark;
+  font-size: 0.7rem;
+  line-height: 1;
+  cursor: help;
+}
+
+.product-tooltip-template {
+  display: none;
+}
+
+.tippy-box {
+  background: $colour-white;
+  color: $colour-text-charcoal;
+  border: 1px solid $colour-border;
+  border-radius: 10px;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.18),
+    0 6px 18px rgba(0, 0, 0, 0.12);
+
+  .tippy-content {
+    padding: 16px 18px;
+  }
+
+  .tippy-arrow::before {
+    color: $colour-white;
+  }
+}
+
+.tippy-box {
+  .product-page & {
+    min-height: 300px;
+
+    .product-tooltip-title {
+      font-size: 1.5rem;
+      padding-right: 20px;
+    }
+
+    .product-tooltip-description {
+      font-size: 1rem;
+    }
+
+    .product-tag {
+      font-size: 1rem;
+    }
+  }
+}
+
+.product-tooltip-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+}
+
+.product-tooltip-close {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: $colour-white;
+  color: $colour-text-mid;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.product-tooltip-close:focus-visible {
+  outline: 2px solid $colour-primary;
+  outline-offset: 2px;
+}
+
+.product-tooltip-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: $colour-text-deep;
+}
+
+.product-tooltip-description {
+  margin: 0;
+  color: $colour-text-mid;
+}
+
+.product-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.product-tags[hidden],
+.product-tag[hidden] {
+  display: none;
+}
+
+.product-tag {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid $colour-ink;
+  font-size: 0.8rem;
+}
+
+.outcome-nav {
+  padding: 0 15px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 4px 4px 0 0;
+    color: $colour-white;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+}
+
+.outcome-descriptions {
+  padding: 12px 15px;
+}
+
+.nav-wheel {
+  --size: 420px;
+  --ring: 24px;
+  --c1: #7fc9b0;
+  --c2: #6aa6d8;
+  --c3: #e58bcf;
+  --c4: #b7cc8a;
+  --c5: #9f7bd4;
+  --c6: #f1c26a;
+  width: var(--size);
+  aspect-ratio: 1;
+  position: absolute;
+  top: 118px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--c2) 0deg 60deg,
+    var(--c3) 60deg 120deg,
+    var(--c4) 120deg 180deg,
+    var(--c5) 180deg 240deg,
+    var(--c6) 240deg 300deg,
+    var(--c1) 300deg 360deg
+  );
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+  z-index: 9;
+
+  &:has(.l1:hover) {
+    --c1: #64b79c;
+  }
+  &:has(.l2:hover) {
+    --c2: #4f94cf;
+  }
+  &:has(.l3:hover) {
+    --c3: #db70c0;
+  }
+  &:has(.l4:hover) {
+    --c4: #a4bd6b;
+  }
+  &:has(.l5:hover) {
+    --c5: #8a63c4;
+  }
+  &:has(.l6:hover) {
+    --c6: #e7b452;
+  }
+
+  &:has(.active) .wheel-label:not(.active),
+  .wheel-label:not(.active) {
+    opacity: 0.33;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.nav-wheel {
+  .product-page &,
+  .outcome-page & {
+    pointer-events: none;
+  }
+}
+
+.wheel-center {
+  position: absolute;
+  inset: 38% 38%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 35% 35%,
+      $colour-wheel-center-light 0 40%,
+      $colour-wheel-center-mid 70%
+    ),
+    $colour-wheel-center-mid;
+  box-shadow:
+    inset 0 0 0 2px rgba(0, 0, 0, 0.06),
+    0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wheel-label {
+  position: absolute;
+  width: 30%;
+  text-align: center;
+  font-weight: 700;
+  color: $colour-wheel-label;
+  font-size: 16px;
+  line-height: 1.15;
+  cursor: pointer;
+}
+
+.l1 {
+  top: 18%;
+  left: 16%;
+}
+
+.l2 {
+  top: 18%;
+  right: 18%;
+}
+
+.l3 {
+  top: 46%;
+  right: 6%;
+}
+
+.l4 {
+  bottom: 13%;
+  right: 18%;
+}
+
+.l5 {
+  bottom: 14%;
+  left: 18%;
+}
+
+.l6 {
+  top: 44%;
+  left: 5%;
+}
+
+/* -------------------------------
+   Strategy Page
+-------------------------------- */
+
+@each $page, $theme in $page-themes {
+  .#{$page} {
+    header,
+    footer,
+    .services-list button.is-active,
+    .activity-list button.is-active {
+      background-color: map.get($theme, header);
+    }
+
+    .outcome-descriptions,
+    .outcome-nav button.is-active,
+    .services-list button,
+    .activity-list button {
+      color: map.get($theme, text);
+      background-color: map.get($theme, panel);
+    }
+  }
+}
+
+/* -------------------------------
+   Landing Page
+-------------------------------- */
+.disabled {
+  pointer-events: none;
+}
+
+.landing-section {
+  width: min(100%, 800px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro-block {
+  background-color: $colour-white;
+  box-shadow: 0 12px 24px $colour-shadow;
+  border: 2px solid $colour-black;
+  padding: 15px;
+  color: $colour-black;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  align-items: stretch;
+  margin: 10px auto 20px;
+}
+
+.intro-block--large {
+  grid-row: 1 / span 2;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    order: 2;
+  }
+  h2 {
+    margin-bottom: 10px;
+    order: 1;
+    color: $colour-primary;
+  }
+}
+
+.intro-block--wide ul {
+  padding-left: 15px;
+}
+
+.intro-links-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.intro-link {
+  text-align: center;
+
+  img {
+    display: inline;
+    transition: transform 0.15s ease;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  .intro-link-title {
+    margin-bottom: 10px;
+  }
+
+  .intro-link-description {
+    line-height: 1.2;
+  }
+}
+
+/* -------------------------------
+   Dropdown View Selector
+-------------------------------- */
+
+.view-selector {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  border: 2px solid $colour-black;
+  padding: 5px;
+}
+
+/* -------------------------------
+   GOV.UK Notification Banner
+-------------------------------- */
+
+.govuk-notification-banner {
+  margin-bottom: 2rem;
+  border: 5px solid $colour-govuk-blue;
+  background-color: $colour-govuk-blue;
+  color: $colour-ink;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
+
+  &__header {
+    padding: 0.75rem 1rem;
+    background-color: $colour-govuk-blue;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $colour-white;
+  }
+
+  &__content {
+    padding: 1rem;
+    background-color: $colour-white;
+  }
+
+  &__heading {
+    margin: 0 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: $colour-ink;
+  }
+
+  a {
+    color: $colour-govuk-blue;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.1em;
+
+    &:visited {
+      color: #4c2c92;
+    }
+
+    &:hover {
+      color: #003078;
+      text-decoration-thickness: 3px;
+    }
+
+    &:active {
+      color: $colour-ink;
+    }
+
+    &:focus {
+      outline: 3px solid transparent;
+      color: $colour-ink;
+      background-color: #ffdd00;
+      box-shadow:
+        0 -2px #ffdd00,
+        0 4px $colour-ink;
+      text-decoration: none;
+    }
+  }
+}

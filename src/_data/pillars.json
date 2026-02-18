@@ -1,0 +1,50 @@
+[
+  {
+    "id": "p1",
+    "class": "l2",
+    "label": "Quality customer information",
+    "slug": "quality-customer-information",
+    "order": 1,
+    "outcomeIds": ["o1", "o2", "o3", "o4"]
+  },
+  {
+    "id": "p5",
+    "class": "l3",
+    "label": "Stronger local partnerships",
+    "slug": "stronger-local-partnerships",
+    "order": 5,
+    "outcomeIds": ["o19", "o20", "o21", "o22", "o23"]
+  },
+  {
+    "id": "p6",
+    "class": "l4",
+    "label": "A sustainable DWP with a smaller, better, greener estate",
+    "slug": "a-sustainable-dwp-with-a-smaller-better-greener-estate",
+    "order": 6,
+    "outcomeIds": ["o24", "o25", "o26", "o27", "o28"]
+  },
+  {
+    "id": "p3",
+    "class": "l5",
+    "label": "A prevent-first fraud and error approach",
+    "slug": "a-prevent-first-fraud-and-error-approach",
+    "order": 3,
+    "outcomeIds": ["o10", "o11", "o12", "o13", "o14"]
+  },
+  {
+    "id": "p4",
+    "class": "l6",
+    "label": "Services through a range of channels",
+    "slug": "services-through-a-range-of-channels",
+    "order": 4,
+    "outcomeIds": ["o15", "o16", "o17", "o18"]
+  },
+  {
+    "id": "p2",
+    "class": "l1",
+    "label": "Automation, digital and AI",
+    "slug": "automation-digital-and-ai",
+    "order": 2,
+    "outcomeIds": ["o5", "o6", "o7", "o8", "o9"]
+  }
+]

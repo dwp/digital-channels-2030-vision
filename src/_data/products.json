@@ -1,0 +1,696 @@
+[
+  {
+    "id": "pr1",
+    "name": "One Login",
+    "label": "One Login",
+    "icon": "one-login.svg",
+    "description": "Standardises identity verification across services, enhancing security and streamlining customer access.",
+    "actionIds": ["a1", "a2", "a3", "a4", "a6", "a7"],
+    "tagsByService": {
+      "a1": ["In Scope", "May 2026"],
+      "a2": [],
+      "a3": ["In Scope", "May 2026"],
+      "a4": ["Live"],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr2",
+    "name": "Fraud Referral Capture (FRC)",
+    "label": "Fraud Referral Capture (FRC)",
+    "icon": "fraud-referral-capture.svg",
+    "description": "Enables online reporting of benefit fraud, strengthening detection and response capabilities.",
+    "actionIds": ["a2"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr3",
+    "name": "One View",
+    "label": "One View",
+    "icon": "one-view.svg",
+    "description": "Aggregates customer and benefit data for staff, supporting rapid, accurate decision-making and consistent service delivery.",
+    "actionIds": ["a1", "a2", "a3", "a4", "a6", "a7"],
+    "tagsByService": {
+      "a1": ["In Scope", "FY 26/27", "Agent Assisted"],
+      "a2": ["Agent Assisted"],
+      "a3": ["Live", "Agent Assisted"],
+      "a4": ["In Scope", "Sep 2026", "Agent Assisted"],
+      "a5": [],
+      "a6": ["In Scope", "Sep 2026", "Agent Assisted"],
+      "a7": ["Agent Assisted"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr4",
+    "name": "GOV.UK Signposting",
+    "label": "GOV.UK Signposting",
+    "icon": "govuk-signposting.svg",
+    "description": "Guides users to appropriate government services online, supporting self-service and reducing confusion.",
+    "actionIds": ["a2", "a3", "a4", "a5", "a6", "a7", "a8"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Self-Serve", "Assisted Digital"],
+      "a3": ["In Scope", "Dec 2026"],
+      "a4": [],
+      "a5": [],
+      "a6": ["In Scope", "Sep 2026"],
+      "a7": ["Self-Serve", "Assisted Digital"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr5",
+    "name": "GOV App",
+    "label": "GOV App",
+    "icon": "govuk-app.svg",
+    "description": "Offers a unified digital gateway for government services, simplifying access and enhancing user experience.",
+    "actionIds": ["a2", "a3", "a4", "a6", "a7"],
+    "tagsByService": {
+      "a1": ["In Scope", "FY 26/27", "Assisted Digital", "Self-Serve"],
+      "a2": [],
+      "a3": ["In Scope", "Dec 2026", "Assisted Digital", "Self-Serve"],
+      "a4": ["In Scope", "Early 2026", "Self-Serve", "Assisted Digital"],
+      "a5": [],
+      "a6": ["Assisted Digital", "Self-Serve"],
+      "a7": [
+        "In Scope",
+        "Mar 2026",
+        "Private Beta",
+        "Self-Serve",
+        "Assisted Digital"
+      ],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr6",
+    "name": "Customer Preferences",
+    "label": "Customer Preferences",
+    "icon": "customer-preferences.svg",
+    "description": "Captures and applies communication and accessibility choices, ensuring every interaction aligns with individual needs and regulatory standards.",
+    "actionIds": ["a1", "a2", "a4", "a6", "a7", "a8"],
+    "tagsByService": {
+      "a1": [
+        "Self-Serve",
+        "Vulnerable",
+        "Customer Preferences",
+        "Reasonable Adjustments"
+      ],
+      "a2": [
+        "Self-Serve",
+        "Vulnerable",
+        "Customer Preferences",
+        "Reasonable Adjustments"
+      ],
+      "a3": [],
+      "a4": [
+        "In Scope",
+        "Mar 2026",
+        "Self-Serve",
+        "Vulnerable",
+        "Customer Preferences",
+        "Reasonable Adjustments"
+      ],
+      "a5": [],
+      "a6": [
+        "In Scope",
+        "Mar 2026",
+        "Self-Serve",
+        "Vulnerable",
+        "Customer Preferences",
+        "Reasonable Adjustments"
+      ],
+      "a7": [
+        "Self-Serve",
+        "Vulnerable",
+        "Customer Preferences",
+        "Reasonable Adjustments"
+      ],
+      "a8": [
+        "Self-Serve",
+        "Vulnerable",
+        "Customer Preferences",
+        "Reasonable Adjustments"
+      ]
+    }
+  },
+  {
+    "id": "pr7",
+    "name": "Message Centre",
+    "label": "Message Centre",
+    "icon": "outgoing-mail-1.svg",
+    "description": "Provides a secure digital mailbox for official communications, improving accessibility and reducing reliance on physical correspondence.",
+    "actionIds": ["a1", "a2", "a4", "a6", "a7"],
+    "tagsByService": {
+      "a1": ["In Scope", "May 2026", "Self-Serve", "Assisted Digital"],
+      "a2": [],
+      "a3": [],
+      "a4": ["In Scope", "May 2026", "Self-Serve", "Assisted Digital"],
+      "a5": [],
+      "a6": [],
+      "a7": ["In Scope", "May 2026", "Self-Serve", "Assisted Digital"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr8",
+    "name": "ECMS",
+    "label": "ECMS",
+    "icon": "ecms-2.svg",
+    "description": "Digitises and organises documents and evidence, streamlining access and supporting paperless operations.",
+    "actionIds": ["a1", "a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr9",
+    "name": "Conversational Platform (IVR)",
+    "label": "Conversational Platform (IVR)",
+    "icon": "conversational-platform.svg",
+    "description": "Modernises telephony with automated routing and self-service, improving efficiency and customer satisfaction.",
+    "actionIds": ["a2", "a3", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": ["Assisted Digital"],
+      "a4": [],
+      "a5": ["Assisted Digital"],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr10",
+    "name": "Vulnerability Scanning",
+    "label": "Vulnerability Scanning",
+    "icon": "vulnerability-scanning.svg",
+    "description": "Identifies vulnerable customers through automated mail analysis, enabling proactive support and safeguarding.",
+    "actionIds": ["a1", "a2", "a6", "a7", "a8"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Assisted Digital"],
+      "a3": [],
+      "a4": ["Live", "Assisted Digital"],
+      "a5": [],
+      "a6": ["Assisted Digital"],
+      "a7": ["Assisted Digital"],
+      "a8": ["Assisted Digital"]
+    }
+  },
+  {
+    "id": "pr11",
+    "name": "Workforce Management",
+    "label": "Workforce Management",
+    "icon": "workplace-management.svg",
+    "description": "Optimises resource planning and scheduling, aligning staff deployment with service demand for greater efficiency.",
+    "actionIds": ["a2", "a5", "a6", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr12",
+    "name": "Work Manager",
+    "label": "Work Manager",
+    "icon": "work-manager.svg",
+    "description": "Automates task allocation and tracking, improving operational efficiency and reducing errors.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": ["Live"],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr13",
+    "name": "Single Customer Account",
+    "label": "Single Customer Account",
+    "icon": "single-customer-account.svg",
+    "description": "Centralises benefit management and personal details, enabling efficient self-service and reducing duplication across government services.",
+    "actionIds": ["a1", "a2", "a3", "a4", "a6", "a7"],
+    "tagsByService": {
+      "a1": ["In Scope", "FY 26/27", "Assisted Digital", "Self-Serve"],
+      "a2": [],
+      "a3": ["In Scope", "Dec 2026", "Self-Serve"],
+      "a4": ["Live"],
+      "a5": [],
+      "a6": ["In Scope", "Sep 2026", "Self-Serve"],
+      "a7": [
+        "In Scope",
+        "Mar 2026",
+        "Private Beta",
+        "Self-Serve",
+        "Assisted Digital"
+      ],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr14",
+    "name": "Webchat (Async)",
+    "label": "Webchat (Async)",
+    "icon": "webchat-async.svg",
+    "description": "Allows customers to send messages and receive responses later, offering flexibility without needing to stay online continuously.",
+    "actionIds": ["a2", "a4", "a5", "a6", "a7", "a8"],
+    "tagsByService": {
+      "a1": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a2": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a3": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a4": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a5": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a6": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a7": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr15",
+    "name": "Webchat (Sync)",
+    "label": "Webchat (Sync)",
+    "icon": "webchat-sync.svg",
+    "description": "Provides real-time text-based support from an agent, enabling customers to resolve queries instantly within their digital journey.",
+    "actionIds": ["a1", "a2", "a4", "a5", "a6", "a7"],
+    "tagsByService": {
+      "a1": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a2": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a3": [],
+      "a4": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a5": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve", "Bot"],
+      "a6": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve", "Bot"],
+      "a7": ["Assisted Digital", "Agent Assisted Digital", "Self-Serve"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr16",
+    "name": "Click-to-Call",
+    "label": "Click-to-Call",
+    "icon": "click-to-call.svg",
+    "description": "Lets customers request an immediate or scheduled voice call directly from a digital channel for quick escalation.",
+    "actionIds": ["a2", "a4", "a5", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Agent Assisted Digital"],
+      "a3": [],
+      "a4": ["Agent Assisted Digital"],
+      "a5": ["Agent Assisted Digital"],
+      "a6": [],
+      "a7": ["Agent Assisted Digital"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr17",
+    "name": "Co-Browse",
+    "label": "Co-Browse",
+    "icon": "co-browse.svg",
+    "description": "Enables an agent to view and guide a customer's screen in real time, helping complete online forms or processes accurately.",
+    "actionIds": ["a2", "a4", "a5", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Agent Assisted Digital"],
+      "a3": [],
+      "a4": ["Agent Assisted Digital"],
+      "a5": ["Agent Assisted Digital"],
+      "a6": [],
+      "a7": ["Agent Assisted Digital"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr18",
+    "name": "Telephony",
+    "label": "Telephony",
+    "icon": "telephony-2.svg",
+    "description": "Provides direct, real-time assistance for a wide range of enquiries, supporting efficient resolution of complex cases and maintaining service",
+    "actionIds": ["a2", "a4", "a5", "a6", "a7", "a8"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [
+        "Live",
+        "Scale Down",
+        "Customer Preference",
+        "Vulnerable",
+        "Agent Assisted"
+      ],
+      "a3": [],
+      "a4": [
+        "Live",
+        "Scale Down",
+        "Customer Preference",
+        "Vulnerable",
+        "Agent Assisted"
+      ],
+      "a5": [
+        "Live",
+        "Scale Down",
+        "Customer Preference",
+        "Vulnerable",
+        "Agent Assisted"
+      ],
+      "a6": [],
+      "a7": [
+        "Live",
+        "Scale Down",
+        "Customer Preference",
+        "Vulnerable",
+        "Agent Assisted"
+      ],
+      "a8": [
+        "Live",
+        "Scale Down",
+        "Customer Preference",
+        "Vulnerable",
+        "Agent Assisted"
+      ]
+    }
+  },
+  {
+    "id": "pr19",
+    "name": "Post",
+    "label": "Post",
+    "icon": "post-2.svg",
+    "description": "Represents the current majority of customer correspondence, relying on physical letters for official communications. In future, its use will be reserved for customers who explicitly prefer paper-based interactions or require additional support due to vulnerability.",
+    "actionIds": ["a1", "a2", "a4", "a5", "a7", "a8"],
+    "tagsByService": {
+      "a1": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ],
+      "a2": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ],
+      "a3": [],
+      "a4": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ],
+      "a5": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ],
+      "a6": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ],
+      "a7": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ],
+      "a8": [
+        "Live",
+        "Scale Down",
+        "Reasonable Adjustments",
+        "Customer Preference",
+        "Vulnerable"
+      ]
+    }
+  },
+  {
+    "id": "pr20",
+    "name": "SMS",
+    "label": "SMS",
+    "icon": "sms-2.svg",
+    "description": "A secure and efficient way to send short text messages to customers' mobile devices, providing instant updates and important service notifications",
+    "actionIds": ["a1", "a2", "a4", "a5", "a7", "a8"],
+    "tagsByService": {
+      "a1": ["Assisted Digital", "Customer Preference"],
+      "a2": ["Assisted Digital", "Customer Preference"],
+      "a3": [],
+      "a4": ["Assisted Digital", "Customer Preference"],
+      "a5": ["Assisted Digital", "Customer Preference"],
+      "a6": ["Assisted Digital", "Customer Preference"],
+      "a7": ["Assisted Digital", "Customer Preference"],
+      "a8": ["Assisted Digital", "Customer Preference"]
+    }
+  },
+  {
+    "id": "pr21",
+    "name": "Strategic Video",
+    "label": "Strategic Video",
+    "icon": "strategic-video.svg",
+    "description": "Facilitates remote appointments, increasing service reach and reducing barriers for customers with mobility or accessibility needs.",
+    "actionIds": ["a2", "a4", "a5", "a7", "a8"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Agent Assisted Digital"],
+      "a3": [],
+      "a4": ["Agent Assisted Digital"],
+      "a5": ["Live", "Health", "Agent Assisted Digital"],
+      "a6": [],
+      "a7": ["Agent Assisted Digital"],
+      "a8": ["Agent Assisted Digital"]
+    }
+  },
+  {
+    "id": "pr22",
+    "name": "Digital Wallet",
+    "label": "Digital Wallet",
+    "icon": "digital-passport.svg",
+    "description": "Secures benefit-related documents and credentials digitally, reducing paperwork and supporting sustainability.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": ["In Scope", "Nov 2026", "Self-Serve", "Assisted Digital"],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr23",
+    "name": "Real time customer feedback",
+    "label": "Real time customer feedback",
+    "icon": "real-time-customer-feedback.svg",
+    "description": "A tool that captures immediate customer responses after interactions, helping DWP improve services and understand customer needs.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Assisted Digital"],
+      "a3": [],
+      "a4": ["Assisted Digital"],
+      "a5": [],
+      "a6": [],
+      "a7": ["Assisted Digital"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr24",
+    "name": "Telephony Fraud Identification (TFI)",
+    "label": "Telephony Fraud Identification (TFI)",
+    "icon": "telephony-fraud-identification.svg",
+    "description": "Mitigates fraud risk by detecting and blocking suspicious calls, protecting departmental resources and customer security.",
+    "actionIds": ["a2"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr25",
+    "name": "Evidence Upload",
+    "label": "Evidence Upload",
+    "icon": "evidence-upload.svg",
+    "description": "Captures and applies communication and accessibility choices, ensuring every interaction aligns with individual needs and regulatory standards.",
+    "actionIds": ["a2", "a6", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr26",
+    "name": "Searchlight",
+    "label": "Searchlight",
+    "icon": "searchlight-2.svg",
+    "description": "Delivers secure, real-time access to citizen records, underpinning reliable operations and compliance.",
+    "actionIds": ["a2"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr27",
+    "name": "Workspace (NGCC Softphone)",
+    "label": "Workspace (NGCC Softphone)",
+    "icon": "workspace-ngcc-softphone.svg",
+    "description": "Enables remote and flexible working for agents, supporting seamless service delivery and estate optimisation.",
+    "actionIds": ["a2", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": ["Live"],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr28",
+    "name": "Channel Strategy",
+    "label": "Channel Strategy",
+    "icon": "channel-strategy.svg",
+    "description": "Defines a comprehensive approach for engaging customers across digital platforms, aligning channel use with business objectives and customer needs.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr29",
+    "name": "Contact Centre Modernisation Programme",
+    "label": "CCMP",
+    "icon": "contact-centre-modernisation-programme.svg",
+    "description": "Upgrading technology and processes to support multichannel customer engagement and improved agent workflows.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Live"],
+      "a3": [],
+      "a4": ["Live"],
+      "a5": [],
+      "a6": [],
+      "a7": ["Live"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr30",
+    "name": "Service Design",
+    "label": "Service Design",
+    "icon": "service-design.svg",
+    "description": "Implements user-centred, end-to-end journeys for complex services, connecting digital and offline touchpoints to improve outcomes and simplify interactions.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Live"],
+      "a3": [],
+      "a4": ["Live"],
+      "a5": [],
+      "a6": [],
+      "a7": ["Live"],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr31",
+    "name": "Strategic Notifications",
+    "label": "Strategic Notifications",
+    "icon": "strategic-notifications.svg",
+    "description": "Automates multi-channel updates, ensuring timely, consistent communication and reducing missed actions.",
+    "actionIds": ["a2", "a4", "a7"],
+    "tagsByService": {
+      "a1": [],
+      "a2": [],
+      "a3": [],
+      "a4": [],
+      "a5": [],
+      "a6": [],
+      "a7": [],
+      "a8": []
+    }
+  },
+  {
+    "id": "pr32",
+    "name": "Face-to-Face",
+    "label": "Face-to-Face",
+    "icon": "face-to-face.svg",
+    "description": "Delivers personalised support for complex or sensitive needs through in-person appointments, ensuring accessibility and building trust for customers who benefit most from direct interaction.",
+    "actionIds": ["a2", "a4", "a5", "a7", "a8"],
+    "tagsByService": {
+      "a1": [],
+      "a2": ["Live", "Vulnerable", "Agent Assisted"],
+      "a3": [],
+      "a4": ["Live", "Vulnerable", "Agent Assisted"],
+      "a5": ["Live", "Vulnerable", "Agent Assisted"],
+      "a6": [],
+      "a7": ["Live", "Vulnerable", "Agent Assisted"],
+      "a8": ["Live", "Vulnerable", "Agent Assisted"]
+    }
+  }
+]

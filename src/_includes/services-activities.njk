@@ -1,0 +1,44 @@
+<div class="service-container">
+  <ul class="services-list">
+    {% for action in services %}
+      {% if action.type == "service" %}
+        {% set pillarIds = outcomesByAction[action.id] or[] %}
+        <li>
+          <button 
+          class="service-label"
+          aria-label="More info about {{ action.label }}"
+          title="{{ action.description | escape }}"
+          data-tippy-content="{{ action.description | escape }}"
+          data-action-id="{{ action.id }}"
+          data-pillar-ids="{{ pillarIds | join(',') }}"
+          data-activity-ids="{{ action.activityIds | join(',') }}"
+          data-product-ids="{{ action.productIds | join(',') }}">
+            {{ action.label }}
+            {# <span class="service-tooltip">i</span> #}
+          </button>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="activity-list">
+    {% for action in services %}
+      {% if action.type == "activity" %}
+        {% set pillarIds = outcomesByAction[action.id] or[] %}
+        <li>
+          <button 
+          class="service-label"
+          aria-label="More info about {{ action.label }}"
+          title="{{ action.description | escape }}"
+          data-tippy-content="{{ action.description | escape }}"
+          data-action-id="{{ action.id }}"
+          data-pillar-ids="{{ pillarIds | join(',') }}"
+          data-product-ids="{{ action.productIds | join(',') }}">
+            {{ action.label }}
+            {# <span class="service-tooltip">i</span> #}
+          </button>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,25 @@
+{
+  "name": "dwp-poc",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel dev:eleventy dev:sass",
+    "dev:eleventy": "eleventy --serve",
+    "dev:sass": "sass --watch src/styles/main.scss:_site/assets/main.css --no-source-map",
+    "build": "NODE_ENV=production npm-run-all build:eleventy build:js build:sass build:css",
+    "build:eleventy": "eleventy",
+    "build:js": "terser assets/main.js -o _site/assets/main.js -c -m",
+    "build:sass": "sass src/styles/main.scss:_site/assets/main.css --no-source-map",
+    "build:css": "postcss _site/assets/main.css --replace"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "cssnano": "^7.0.6",
+    "html-minifier-terser": "^7.2.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.77.8",
+    "terser": "^5.39.0"
+  }
+}

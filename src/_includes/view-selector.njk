@@ -1,0 +1,16 @@
+{% if page.url != "/" %}
+  <select id="view-selector" class="view-selector" aria-label="Switch to different view">
+    <option value="" selected disabled>Switch to different view</option>
+    {% if not page
+      .url
+      .startsWith("/strategy/") %}
+      <option value="/strategy/">Strategy-led view</option>
+    {% endif %}
+    {% if page.url != "/outcome/" %}
+      <option value="/outcome/">Outcome-led view</option>
+    {% endif %}
+    {% if page.url != "/product/" %}
+      <option value="/product/">Product-led view</option>
+    {% endif %}
+  </select>
+{% endif %}

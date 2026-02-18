@@ -1,93 +1,104 @@
-# digital-channels-2030-vision
+# DWP Digital Channels - 2030 Strategy Visualisation
 
+A small, data-driven Eleventy site that visualises how Digital Channels products connect to DWP’s 2030 strategy. It’s designed to be maintained by service and interaction designers: most updates are made by editing JSON files in `src/_data`, not by writing code.
 
+## What this site does
 
-## Getting started
+- Shows a **Strategy** view that links outcomes to strategic pillars.
+- Shows an **Outcome** view that maps services/activities to outcomes and related products.
+- Shows a **Product** view with product tiles, descriptions, and tags.
+- Lets you click services/activities or product tiles to highlight related items and reveal more context.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## How it works
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Eleventy reads data from `src/_data` and injects it into Nunjucks templates (`.njk`). A small JS file wires up interactions on the page.
 
-## Add your files
+Data sources (edit these to change content):
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+- `src/_data/landingPage.json` — home page heading, intro, and CTAs.
+- `src/_data/pillars.json` — strategic pillars (used for the strategy wheel).
+- `src/_data/outcomes.json` — outcomes, tied to pillars and services/activities.
+- `src/_data/services.json` — services and activities (and the products they relate to).
+- `src/_data/products.json` — product tiles, descriptions, icons, and tags-by-service.
 
+Derived data (auto-built from the above):
+
+- `src/_data/productsWithTags.js` — builds product tags from `tagsByService`.
+- `src/_data/actionsByProduct.js` — maps products to related services/activities.
+- `src/_data/outcomesByAction.js` — maps services/activities to pillar IDs.
+- `src/_data/outcomesByPillar.js` — groups outcomes by pillar.
+
+## Project structure
+
+```text
+.
+├─ src/
+│  ├─ _data/            # Content and relationships (edit here most)
+│  ├─ _includes/        # Reusable Nunjucks components
+│  ├─ styles/           # Sass source
+│  ├─ index.njk         # Home
+│  ├─ outcome.njk       # Outcome view
+│  ├─ product.njk       # Product view
+│  └─ strategy/         # Strategy view
+│     └─ *.njk          # Pages under /strategy/
+├─ assets/              # JS + static assets
+├─ icons/               # Product icons
+├─ _site/               # Build output
+├─ .eleventy.js         # Eleventy config
+├─ postcss.config.js    # CSS build config
+└─ package.json         # Scripts + dependencies
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/dwp/user-centred-design/digital-channels-2030-vision.git
-git branch -M main
-git push -uf origin main
+
+## Common content updates
+
+### Edit or add a product
+
+1. Update `src/_data/products.json`.
+2. Ensure the product `id` is unique.
+3. Add an icon file to `icons/` and reference its filename in `icon`.
+4. Update `productIds` in `src/_data/services.json` so the product appears in the right services/activities.
+
+### Update services or activities
+
+1. Edit entries in `src/_data/services.json`.
+2. Each item uses `type: "service"` or `type: "activity"`.
+3. Link to products via `productIds`.
+
+### Update outcomes or pillars
+
+1. Edit `src/_data/outcomes.json` (for outcomes and their links to services/activities).
+2. Edit `src/_data/pillars.json` (for pillar names and slugs).
+
+### Update the home page text
+
+Edit `src/_data/landingPage.json`.
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-## Integrate with your tools
+Run the site locally:
 
-* [Set up project integrations](https://gitlab.com/dwp/user-centred-design/digital-channels-2030-vision/-/settings/integrations)
+```bash
+npm start
+```
 
-## Collaborate with your team
+This runs Eleventy and Sass in watch mode. Output appears in `_site/` and is served locally.
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+## Production build
 
-## Test and Deploy
+```bash
+npm run build
+```
 
-Use the built-in continuous integration in GitLab.
+This builds the site, compiles Sass, and minifies HTML/CSS for production.
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+## Notes
 
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- The project is intentionally data-first. Most changes are JSON edits, not code changes.
+- If something doesn’t appear as expected, double-check the `id` links between files.
+- Keep `id` values stable; other files reference them.

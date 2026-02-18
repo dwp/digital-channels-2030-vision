@@ -1,0 +1,33 @@
+{
+  "heading": "Digital Channels",
+  "subHeading": "Visualising our products within the DWP strategy for 2030",
+  "description": "Digital Channels is delivering many of the building blocks that will enable DWP's 2030 strategy - products, features and components that only realise their full value when joined together as complete services and activities.",
+  "instructions": [
+    {
+      "steps1": "Use the Strategy Drivers to see how services and products connect to the DWP 2030 Vision."
+    },
+    {
+      "steps2": "Explore by Outcome View to see how services and activities contribute to the outcomes we're aiming for."
+    },
+    {
+      "steps3": "Switch to Product View to locate specific products in context."
+    }
+  ],
+  "callToActions": [
+    {
+      "text": "Strategy",
+      "description": "The strategic drivers that show how our work connects to the wider 2030 vision.",
+      "link": "/strategy/"
+    },
+    {
+      "text": "Outcome",
+      "description": "The outcomes delivered shown through an enterprise view of services and activities.",
+      "link": "/outcome/"
+    },
+    {
+      "text": "Product",
+      "description": "The products, components and enablers - building blocks for joined-up services.",
+      "link": "/product/"
+    }
+  ]
+}

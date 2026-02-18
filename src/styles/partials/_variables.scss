@@ -1,0 +1,63 @@
+$colour-white: #ffffff;
+$colour-black: #000000;
+$colour-ink: #0b0c0c;
+
+$colour-body-bg: #d8d8d8;
+$colour-body-pattern: #9e9d9e;
+
+$colour-primary: #02857f;
+$colour-secondary: #b3ece9;
+$colour-primary-contrast: #ffffff;
+
+$colour-text-muted: #555555;
+$colour-text-dark: #2a2a2a;
+$colour-text-charcoal: #2b2b2b;
+$colour-text-mid: #5b5b5b;
+$colour-text-deep: #1a1a1a;
+$colour-text-soft: #979797;
+
+$colour-tile-bg: #e7e6e6;
+$colour-surface: #f4f4f4;
+$colour-border: #d0d0d0;
+
+$colour-wheel-label: #222222;
+$colour-wheel-center-light: #efefef;
+$colour-wheel-center-mid: #d6d6d6;
+
+$colour-shadow: rgba(0, 0, 0, 0.12);
+$colour-shadow-strong: rgba(0, 0, 0, 0.18);
+
+$colour-govuk-blue: #1d70b8;
+
+$page-themes: (
+  p1: (
+    header: #447aa7,
+    panel: #5a95c6,
+    text: #ffffff,
+  ),
+  p2: (
+    header: #518774,
+    panel: #6fb89e,
+    text: #ffffff,
+  ),
+  p3: (
+    header: #9369bc,
+    panel: #c3a0de,
+    text: #ffffff,
+  ),
+  p4: (
+    header: #c78d36,
+    panel: #f9c88c,
+    text: #141414,
+  ),
+  p5: (
+    header: #c14fac,
+    panel: #e897d9,
+    text: #ffffff,
+  ),
+  p6: (
+    header: #6d8049,
+    panel: #b0c292,
+    text: #ffffff,
+  ),
+);

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "o1",
+    "code": "1.1",
+    "label": "Provide Information Once",
+    "description": "Ensuring customers only need to give their details or updates a single time, with changes automatically reflected across all relevant services.",
+    "pillarId": "p1",
+    "actionIds": ["a2", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o2",
+    "code": "1.2",
+    "label": "Faster, Accurate Decisions",
+    "description": "Bringing together the right information and tools so staff can make quick, well-informed decisions and resolve queries first time.",
+    "pillarId": "p1",
+    "actionIds": ["a1", "a2", "a3", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o3",
+    "code": "1.3",
+    "label": "Common Rules Across Products",
+    "description": "Applying consistent processes and evidence requirements across different benefits, so customers have a simpler, more predictable experience.",
+    "pillarId": "p1",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o4",
+    "code": "1.4",
+    "label": "Better Management of Customer Information",
+    "description": "Improving how customer data is collected, stored, and shared, so records are always accurate, up to date, and easy to access for those who need them.",
+    "pillarId": "p1",
+    "actionIds": ["a1", "a2", "a3", "a4", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o5",
+    "code": "2.1",
+    "label": "Easier to Track Progress of a Claim",
+    "description": "Giving customers clear, real-time updates on their claims and applications, reducing the need for follow-up calls or letters.",
+    "pillarId": "p2",
+    "actionIds": ["a1", "a2", "a3", "a5", "a6", "a7"]
+  },
+  {
+    "id": "o6",
+    "code": "2.2",
+    "label": "More Time for Customers Who Need Extra Support",
+    "description": "Using automation and digital tools to free up staff time, so more help can be given to those with complex or additional needs.",
+    "pillarId": "p2",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o7",
+    "code": "2.3",
+    "label": "Simpler Instructions and Guidance",
+    "description": "Making processes and communications straightforward and easy to understand, so customers can complete tasks confidently.",
+    "pillarId": "p2",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o8",
+    "code": "2.4",
+    "label": "Skilled to Use Digital Tools",
+    "description": "Ensuring staff have the training and support needed to use new technology effectively and deliver high-quality digital services.",
+    "pillarId": "p2",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o9",
+    "code": "2.5",
+    "label": "No Need to Move Between Systems",
+    "description": "Integrating systems and data so staff and customers can complete tasks without switching between multiple platforms.",
+    "pillarId": "p2",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o10",
+    "code": "3.1",
+    "label": "Accurate Payments",
+    "description": "Designing services and checks to ensure customers receive the right payments at the right time, reducing mistakes and overpayments.",
+    "pillarId": "p3",
+    "actionIds": ["a2", "a3", "a6", "a7"]
+  },
+  {
+    "id": "o11",
+    "code": "3.2",
+    "label": "Right First Time",
+    "description": "Focusing on getting things correct from the start, so customers don't need to chase up or correct errors later.",
+    "pillarId": "p3",
+    "actionIds": ["a2", "a3", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o12",
+    "code": "3.3",
+    "label": "Improved Verification of Customer Information",
+    "description": "Strengthening identity and evidence checks to prevent fraud and ensure only eligible people receive support.",
+    "pillarId": "p3",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o13",
+    "code": "3.4",
+    "label": "Remove Potential for Fraud and Error at the Beginning of a Claim",
+    "description": "Building in safeguards and checks at the start of the process to stop problems before they happen.",
+    "pillarId": "p3",
+    "actionIds": ["a2", "a5", "a6", "a7"]
+  },
+  {
+    "id": "o14",
+    "code": "3.5",
+    "label": "Capability to Move Roles to Meet Demand/Reduce Backlogs",
+    "description": "Using flexible systems and workforce planning to quickly respond to changing workloads and keep services running smoothly.",
+    "pillarId": "p3",
+    "actionIds": ["a2", "a5", "a7"]
+  },
+  {
+    "id": "o15",
+    "code": "4.1",
+    "label": "24/7 Self-Service, with Human Support Where Needed",
+    "description": "Offering customers the ability to access services online at any time, with the option of speaking to a person when extra help is needed.",
+    "pillarId": "p4",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o16",
+    "code": "4.2",
+    "label": "Consistent Experience Across Channels and Services",
+    "description": "Ensuring customers get the same high-quality service and information, whether they use digital, phone, or face-to-face channels.",
+    "pillarId": "p4",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o17",
+    "code": "4.3",
+    "label": "Easier Access to Services",
+    "description": "Making it simple for customers to find, start, and complete the services they need, regardless of their preferred channel.",
+    "pillarId": "p4",
+    "actionIds": ["a1", "a2", "a3", "a4", "a5", "a6", "a7", "a8"]
+  },
+  {
+    "id": "o18",
+    "code": "4.4",
+    "label": "Customers Automatically Routed to the Right Colleague",
+    "description": "Using technology to direct customers to the most appropriate staff member or team, reducing wait times and handoffs.",
+    "pillarId": "p4",
+    "actionIds": ["a2", "a5", "a7"]
+  },
+  {
+    "id": "o19",
+    "code": "5.1",
+    "label": "More Tailored Support",
+    "description": "Working with local partners to provide services that are personalised to the needs of different communities and individuals.",
+    "pillarId": "p5",
+    "actionIds": ["a2", "a8"]
+  },
+  {
+    "id": "o20",
+    "code": "5.2",
+    "label": "Support for Those Looking for Work or Wanting to Progress",
+    "description": "Helping people access the right support, training, and opportunities to find work or advance their careers.",
+    "pillarId": "p5",
+    "actionIds": ["a2", "a4"]
+  },
+  {
+    "id": "o21",
+    "code": "5.3",
+    "label": "Make Use of Local Expertise",
+    "description": "Drawing on the knowledge and resources of local organisations to improve service delivery and outcomes.",
+    "pillarId": "p5",
+    "actionIds": ["a2"]
+  },
+  {
+    "id": "o22",
+    "code": "5.4",
+    "label": "Local Communities Delivering Together",
+    "description": "Collaborating with local authorities and community groups to deliver joined-up support for customers.",
+    "pillarId": "p5",
+    "actionIds": ["a2"]
+  },
+  {
+    "id": "o23",
+    "code": "5.5",
+    "label": "Innovative Ways to Deliver Services Where Customers Are",
+    "description": "Testing and adopting new approaches to reach and support customers in the places and ways that work best for them.",
+    "pillarId": "p5",
+    "actionIds": ["a2", "a5"]
+  },
+  {
+    "id": "o24",
+    "code": "6.1",
+    "label": "Face-to-Face Services Where They Add Value",
+    "description": "Providing in-person support for customers who need it, while encouraging digital and remote options where appropriate.",
+    "pillarId": "p6",
+    "actionIds": ["a2", "a5"]
+  },
+  {
+    "id": "o25",
+    "code": "6.2",
+    "label": "Accessible, Inclusive Locations",
+    "description": "Ensuring DWP sites and services are easy to reach and use for everyone, including those with additional needs.",
+    "pillarId": "p6",
+    "actionIds": ["a2", "a5"]
+  },
+  {
+    "id": "o26",
+    "code": "6.3",
+    "label": "Services Designed and Delivered Sustainably",
+    "description": "Building and running services in ways that reduce environmental impact and make the best use of resources.",
+    "pillarId": "p6",
+    "actionIds": ["a1", "a2", "a4", "a6"]
+  },
+  {
+    "id": "o27",
+    "code": "6.4",
+    "label": "Sustainability Informs Everyday Decisions",
+    "description": "Embedding environmental and social responsibility into daily operations and decision-making.",
+    "pillarId": "p6",
+    "actionIds": ["a1", "a2", "a6"]
+  },
+  {
+    "id": "o28",
+    "code": "6.5",
+    "label": "Workspaces Designed for Multi-Channel Services",
+    "description": "Equipping staff and offices with the tools and technology needed to deliver services across digital, phone, and in-person channels.",
+    "pillarId": "p6",
+    "actionIds": ["a2", "a5"]
+  }
+]

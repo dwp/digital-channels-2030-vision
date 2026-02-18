@@ -1,0 +1,41 @@
+@use "variables" as *;
+
+header,
+footer {
+  background-color: $colour-primary;
+  color: $colour-primary-contrast;
+  position: fixed;
+  width: 100%;
+  z-index: 9;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+  padding: 5px 15px;
+  text-align: center;
+}
+
+main {
+  position: relative;
+  padding-top: 55px;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  padding: 10px 15px;
+  a {
+    color: $colour-primary-contrast;
+  }
+}

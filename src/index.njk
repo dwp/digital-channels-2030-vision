@@ -1,0 +1,34 @@
+---
+layout: base.njk
+title: Home
+---
+
+<div class="container">
+  <div class="intro-grid landing-section">
+    <div class="intro-block intro-block--large">
+      <h1>{{ landingPage.subHeading }}</h1>
+      <h2>{{ landingPage.heading }}</h2>
+    </div>
+    <div class="intro-block intro-block--wide">
+      <strong>{{ landingPage.description }}</strong>
+    </div>
+    <div class="intro-block intro-block--wide">
+      <ul>
+        {% for instruction in landingPage.instructions %}
+          {% for key, text in instruction %}
+            <li>{{ text }}</li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="intro-links-container landing-section">
+    {% for cta in landingPage.callToActions %}
+      <a href="{{ cta.link }}" class="intro-link intro-block">
+        <img width="100" height="100" src="https://img.icons8.com/isometric-line/100/packaging.png" alt="packaging"/>
+        <h3 class="intro-link-title">{{ cta.text }}</h3>
+        <p class="intro-link-description">{{ cta.description }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,3 @@
+@function with-opacity($color, $alpha) {
+  @return rgba($color, $alpha);
+}
