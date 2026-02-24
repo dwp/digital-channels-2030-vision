@@ -221,8 +221,8 @@
   },
   {
     "id": "pr11",
-    "name": "Workforce Engagement Management",
-    "label": "Workforce Engagement Management",
+    "name": "Workforce Engagement Manager",
+    "label": "Workforce Engagement Manager",
     "icon": "workplace-management.svg",
     "description": "Optimises resource planning and scheduling, aligning staff deployment with service demand for greater efficiency.",
     "actionIds": ["a2", "a5", "a6", "a7"],
