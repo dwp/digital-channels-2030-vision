@@ -1,32 +1,13 @@
-default:
-  interruptible: true
-  retry:
-    max: 2
-    when:
-      - unknown_failure
-      - script_failure
-      - api_failure
-      - stuck_or_timeout_failure
-      - runner_system_failure
-      - job_execution_timeout
-      - scheduler_failure
-      - data_integrity_failure
-  tags:
-    - docker
-
-workflow:
-  auto_cancel:
-    on_new_commit: interruptible
+# The Docker image that will be used to build your app
+image: node:lts
+create-pages:
+  pages:
+    # The folder that contains the files to be exposed at the Page URL
+    publish: public
   rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-      when: always
-    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_PIPELINE_SOURCE != "scheduled"
-      when: never
-    - if: $CI_COMMIT_BRANCH
-      when: always
-
-include:
-  - project: dwp/engineering/pipeline-solutions/gitlab/functions
-    ref: 6.0.7
-    file:
-      - functions/base-mr.gitlab-ci.yml
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  # Functions that should be executed before the build script is run
+  before_script:
+    - npm ci
